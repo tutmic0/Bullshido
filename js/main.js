@@ -12,7 +12,7 @@
  * deadlineText       : shown under the progress bar, e.g. "Sept 1, 23:59 UTC"
  * ------------------------------------------------------------------- */
 var CONFIG = {
-  GOOGLE_SCRIPT_URL: "", // TODO: paste your Apps Script Web App URL here
+  GOOGLE_SCRIPT_URL: "https://script.google.com/macros/s/AKfycbx0uFgokWzPYKibueXEMf6aID7kbEwg_VuT-B82c7BAFwPo5k81p4cZhlP8Iq7oZ27NFg/exec", // TODO: paste your Apps Script Web App URL here
   xProfileUrl: "https://x.com/Bullshido", // TODO: confirm handle
   xPostUrl: "#", // TODO: paste the enrollment post link
   maxSpots: 500, // TODO: set the real GTD / free-mint spot count
