@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bullshido Dojo</title>
+<meta name="description" content="Enrollment roster for the Bullshido dojo — 2,112 bull samurai across five ranks.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-scrim"></div>
+  <div class="hero-inner">
+    <div class="wrap" style="padding:0;">
+      <span class="seal"><span class="seal-mark">入</span>Dojo Enrollment &mdash; GTD Roster</span>
+      <h1 class="wordmark">BULL<em>SHIDO</em></h1>
+      <p class="hero-tagline">2,112 bull samurai stand across five ranks. Prove yourself on X, then claim your seat before the gates close.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="#trial">
+          Begin the Trial
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a class="btn btn-ghost" href="#roster">Go straight to the roster</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section id="trial">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Four proofs, one trial</span>
+        <h2 class="section-title">Earn your place</h2>
+        <p class="section-sub">Complete every step on X first &mdash; the roster below records your word against them. Skip one, and your seat is never confirmed.</p>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <div class="step-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7-7 7 7"/></svg>
+          </div>
+          <div class="step-title">Follow the Dojo</div>
+          <div class="step-body">Follow the account so word of the next trial reaches you first.</div>
+          <a class="btn btn-ghost" id="btn-follow" href="#" target="_blank" rel="noopener">Follow on X</a>
+        </div>
+        <div class="step">
+          <div class="step-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7.5-4.6-10-9.1C.4 8.4 2 5 5.4 5 7.6 5 9 6.2 12 9c3-2.8 4.4-4 6.6-4C22 5 23.6 8.4 22 11.9 19.5 16.4 12 21 12 21z"/></svg>
+          </div>
+          <div class="step-title">Mark the Post</div>
+          <div class="step-body">Like the enrollment post &mdash; the first, quiet proof of intent.</div>
+          <a class="btn btn-ghost" id="btn-like" href="#" target="_blank" rel="noopener">View the Post</a>
+        </div>
+        <div class="step">
+          <div class="step-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 2l4 4-4 4M7 22l-4-4 4-4"/><path d="M3 12v-2a4 4 0 0 1 4-4h14M21 12v2a4 4 0 0 1-4 4H3"/></svg>
+          </div>
+          <div class="step-title">Carry the Banner</div>
+          <div class="step-body">Repost it to your own dojo, so others may take the same trial.</div>
+          <a class="btn btn-ghost" id="btn-repost" href="#" target="_blank" rel="noopener">Repost</a>
+        </div>
+        <div class="step">
+          <div class="step-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H8l-5 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          </div>
+          <div class="step-title">Speak Your Name</div>
+          <div class="step-body">Comment your EVM address on the post &mdash; a public oath to match the private one below.</div>
+          <a class="btn btn-ghost" id="btn-comment" href="#" target="_blank" rel="noopener">Comment</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap"><div class="divider"></div></div>
+
+  <section id="roster">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">The roster</span>
+        <h2 class="section-title">Claim your seat</h2>
+        <p class="section-sub">One seat per handle, one per wallet. Entries are reviewed against the post before the gates open &mdash; false oaths are struck from the roster.</p>
+      </div>
+
+      <div class="roster-grid">
+        <div class="ledger">
+          <div id="form-msg" class="form-msg"></div>
+
+          <form id="entry-form">
+            <div class="field">
+              <label for="handle">Your X handle</label>
+              <input type="text" id="handle" name="handle" placeholder="@yourhandle" autocomplete="off">
+              <div class="field-error" id="err-handle"></div>
+            </div>
+            <div class="field mono">
+              <label for="address">Your EVM address</label>
+              <input type="text" id="address" name="address" placeholder="0x..." autocomplete="off">
+              <div class="field-error" id="err-address"></div>
+            </div>
+
+            <div class="checks">
+              <label class="check"><input type="checkbox" name="c1"><span><b>I follow</b> the dojo on X.</span></label>
+              <label class="check"><input type="checkbox" name="c2"><span><b>I liked</b> the enrollment post.</span></label>
+              <label class="check"><input type="checkbox" name="c3"><span><b>I reposted</b> the enrollment post.</span></label>
+              <label class="check"><input type="checkbox" name="c4"><span><b>I commented</b> my address on the post.</span></label>
+            </div>
+
+            <button type="submit" class="btn btn-gold" id="submit-btn">Claim Your Seat</button>
+          </form>
+
+          <div id="success-view" style="display:none;"></div>
+        </div>
+
+        <div class="status-card">
+          <div class="status-row">
+            <span class="eyebrow" style="color:var(--paper-faint);">Seats claimed</span>
+            <span class="status-count" id="status-count">&hellip; / &hellip;</span>
+          </div>
+          <div class="obi"><div class="obi-fill" id="obi-fill"></div></div>
+          <p class="status-note" id="status-note">Enrollment closes: TBA</p>
+
+          <div class="status-divider"></div>
+
+          <div class="status-fact"><span>Collection size</span><b>2,112</b></div>
+          <div class="status-fact"><span>Ranks</span><b>5</b></div>
+          <div class="status-fact"><span>Entry cost</span><b>Free</b></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap"><div class="divider"></div></div>
+
+  <footer>
+    <div class="wrap">
+      <div class="ranks">
+        <span class="rank-chip"><span class="rank-dot" style="background:#B21818;"></span>Common <b>1,225</b></span>
+        <span class="rank-chip"><span class="rank-dot" style="background:#1860E0;"></span>Rare <b>523</b></span>
+        <span class="rank-chip"><span class="rank-dot" style="background:#7618AE;"></span>Epic <b>238</b></span>
+        <span class="rank-chip"><span class="rank-dot" style="background:#FFD25A;"></span>Legendary <b>116</b></span>
+        <span class="rank-chip"><span class="rank-dot" style="background:#FFF8DE;"></span>Ultra Legendary <b>10</b></span>
+      </div>
+      <p class="foot-line">Bullshido &mdash; 2,112 bull samurai across five ranks. This roster is an enrollment record, not a mint site.</p>
+    </div>
+  </footer>
+</main>
+
+<script src="js/main.js"></script>
+</body>
+</html>
