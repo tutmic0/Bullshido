@@ -12,11 +12,11 @@
  * deadlineText       : shown under the progress bar, e.g. "Sept 1, 23:59 UTC"
  * ------------------------------------------------------------------- */
 var CONFIG = {
-  GOOGLE_SCRIPT_URL: "https://script.google.com/macros/s/AKfycbx0uFgokWzPYKibueXEMf6aID7kbEwg_VuT-B82c7BAFwPo5k81p4cZhlP8Iq7oZ27NFg/exec", // TODO: paste your Apps Script Web App URL here
-  xProfileUrl: "https://x.com/Bullshido", // TODO: confirm handle
-  xPostUrl: "#", // TODO: paste the enrollment post link
-  maxSpots: 500, // TODO: set the real GTD / free-mint spot count
-  deadlineText: "TBA" // TODO: set the real deadline
+  GOOGLE_SCRIPT_URL: "https://script.google.com/macros/s/AKfycbx0uFgokWzPYKibueXEMf6aID7kbEwg_VuT-B82c7BAFwPo5k81p4cZhlP8Iq7oZ27NFg/exec",
+  xProfileUrl: "https://x.com/Bullshidooje",
+  xPostUrl: "https://x.com/Bullshidooje/status/2092277163198148797",
+  maxSpots: 600,
+  deadlineText: "Do popune mjesta"
 };
 
 document.getElementById("btn-follow").href = CONFIG.xProfileUrl;
