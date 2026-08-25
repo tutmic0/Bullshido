@@ -76,6 +76,13 @@ h1,h2,h3{
   width:100%;
   padding:clamp(28px,6vw,64px) clamp(20px,4vw,56px) clamp(40px,6vw,72px);
 }
+.hero-badges{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:12px;
+  margin-bottom:26px;
+}
 .seal{
   display:inline-flex;
   align-items:center;
@@ -89,7 +96,6 @@ h1,h2,h3{
   font-weight:700;
   letter-spacing:0.14em;
   text-transform:uppercase;
-  margin-bottom:26px;
 }
 .seal-mark{
   width:20px;height:20px;border-radius:50%;
@@ -380,6 +386,11 @@ section{padding:clamp(56px,9vw,104px) 0;}
   line-height:0;
 }
 .chain-badge img{height:14px;display:block;}
+.chain-badge-lg{
+  border-radius:999px;
+  padding:8px 16px;
+}
+.chain-badge-lg img{height:19px;}
 
 /* ---------------- FOOTER ---------------- */
 footer{
