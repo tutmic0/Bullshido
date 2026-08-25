@@ -369,8 +369,17 @@ section{padding:clamp(56px,9vw,104px) 0;}
 }
 .status-note{font-size:0.8rem;color:var(--paper-faint);}
 .status-divider{height:1px;background:var(--line);margin:22px 0;}
-.status-fact{display:flex;justify-content:space-between;font-size:0.86rem;padding:7px 0;color:var(--paper-dim);}
+.status-fact{display:flex;justify-content:space-between;align-items:center;font-size:0.86rem;padding:7px 0;color:var(--paper-dim);}
 .status-fact b{color:var(--paper);font-weight:700;}
+.chain-badge{
+  display:inline-flex;
+  align-items:center;
+  background:#CCFF00;
+  border-radius:4px;
+  padding:5px 10px;
+  line-height:0;
+}
+.chain-badge img{height:14px;display:block;}
 
 /* ---------------- FOOTER ---------------- */
 footer{
