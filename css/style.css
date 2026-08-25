@@ -388,9 +388,18 @@ section{padding:clamp(56px,9vw,104px) 0;}
 .chain-badge img{height:14px;display:block;}
 .chain-badge-lg{
   border-radius:999px;
-  padding:8px 16px;
+  padding:11px 20px 11px 18px;
+  gap:10px;
 }
-.chain-badge-lg img{height:19px;}
+.chain-badge-lg img{height:26px;}
+.chain-badge-label{
+  font-family:'Zen Kaku Gothic New',sans-serif;
+  font-weight:800;
+  font-size:0.82rem;
+  letter-spacing:0.04em;
+  color:#16130f;
+  white-space:nowrap;
+}
 
 /* ---------------- FOOTER ---------------- */
 footer{
