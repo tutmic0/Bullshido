@@ -16,7 +16,7 @@ var CONFIG = {
   xProfileUrl: "https://x.com/Bullshidooje",
   xPostUrl: "https://x.com/Bullshidooje/status/2092277163198148797",
   maxSpots: 600,
-  deadlineText: "24 hours after the post goes live"
+  deadlineText: "TBA"
 };
 
 document.getElementById("btn-follow").href = CONFIG.xProfileUrl;
