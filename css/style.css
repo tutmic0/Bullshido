@@ -49,6 +49,37 @@ h1,h2,h3{
   color:var(--gold-bright);
 }
 
+/* ---------------- ANNOUNCEMENT BAR ---------------- */
+.announce-bar{
+  display:block;
+  background:var(--gold);
+  color:var(--ink);
+  text-decoration:none;
+  border-bottom:1px solid var(--gold-2);
+}
+.announce-bar:hover{background:var(--gold-bright);}
+.announce-bar-inner{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:9px;
+  max-width:1080px;
+  margin:0 auto;
+  padding:11px clamp(20px,4vw,56px);
+  font-family:'Zen Kaku Gothic New',sans-serif;
+  font-weight:700;
+  font-size:0.82rem;
+  letter-spacing:0.01em;
+  text-align:center;
+}
+.announce-bar-inner svg{width:14px;height:14px;flex-shrink:0;}
+.announce-dot{
+  width:7px;height:7px;border-radius:50%;
+  background:var(--crimson-bright);
+  flex-shrink:0;
+  box-shadow:0 0 0 3px rgba(177,51,50,0.25);
+}
+
 /* ---------------- HERO ---------------- */
 .hero{
   position:relative;
@@ -168,6 +199,12 @@ h1,h2,h3{
   padding:15px 22px;
 }
 .btn-gold:hover{background:var(--gold-bright);}
+.btn-opensea{
+  background:#2081e2;
+  color:#fff;
+  border-color:#2081e2;
+}
+.btn-opensea:hover{background:#1868b7;border-color:#1868b7;}
 .btn-gold:disabled{
   background:var(--ink-3);
   color:var(--paper-faint);
