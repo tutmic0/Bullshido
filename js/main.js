@@ -14,9 +14,9 @@
 var CONFIG = {
   GOOGLE_SCRIPT_URL: "https://script.google.com/macros/s/AKfycbx0uFgokWzPYKibueXEMf6aID7kbEwg_VuT-B82c7BAFwPo5k81p4cZhlP8Iq7oZ27NFg/exec",
   xProfileUrl: "https://x.com/Bullshidooje",
-  xPostUrl: "https://x.com/Bullshidooje/status/2092277163198148797",
+  xPostUrl: "https://x.com/Bullshidooje/status/2093099196672852264",
   maxSpots: 600,
-  deadlineText: "TBA"
+  deadlineText: "24 hours after the post goes live"
 };
 
 document.getElementById("btn-follow").href = CONFIG.xProfileUrl;
