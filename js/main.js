@@ -10,20 +10,26 @@
  * xPostUrl           : the enrollment post visitors must like/repost/comment on
  * maxSpots           : total GTD / free-mint spots
  * deadlineText       : shown under the progress bar, e.g. "Sept 1, 23:59 UTC"
+ * enrollmentClosed   : set true to stop accepting new roster submissions
+ *                      (the button is disabled and the form is locked;
+ *                      the backend also rejects new entries, see Code.gs)
  * ------------------------------------------------------------------- */
 var CONFIG = {
   GOOGLE_SCRIPT_URL: "https://script.google.com/macros/s/AKfycbx0uFgokWzPYKibueXEMf6aID7kbEwg_VuT-B82c7BAFwPo5k81p4cZhlP8Iq7oZ27NFg/exec",
   xProfileUrl: "https://x.com/Bullshidooje",
   xPostUrl: "https://x.com/Bullshidooje/status/2093099196672852264",
-  maxSpots: 600,
-  deadlineText: "24 hours after the post goes live"
+  maxSpots: 500,
+  deadlineText: "24 hours after the post goes live",
+  enrollmentClosed: true
 };
 
 document.getElementById("btn-follow").href = CONFIG.xProfileUrl;
 document.getElementById("btn-like").href = CONFIG.xPostUrl;
 document.getElementById("btn-repost").href = CONFIG.xPostUrl;
 document.getElementById("btn-comment").href = CONFIG.xPostUrl;
-document.getElementById("status-note").textContent = "Enrollment closes: " + CONFIG.deadlineText;
+document.getElementById("status-note").textContent = CONFIG.enrollmentClosed
+  ? "Enrollment is closed."
+  : "Enrollment closes: " + CONFIG.deadlineText;
 
 var HANDLE_RE = /^[A-Za-z0-9_]{1,15}$/;
 var ADDR_RE = /^0x[a-fA-F0-9]{40}$/;
@@ -43,9 +49,23 @@ function renderCount(count) {
   var pct = max > 0 ? Math.min(100, Math.round((count / max) * 100)) : 0;
   obiFill.style.width = pct + "%";
   var full = count >= max;
-  submitBtn.disabled = full;
-  if (full) submitBtn.textContent = "Roster Full";
+  submitBtn.disabled = full || CONFIG.enrollmentClosed;
+  if (CONFIG.enrollmentClosed) {
+    submitBtn.textContent = "Enrollment Closed";
+  } else if (full) {
+    submitBtn.textContent = "Roster Full";
+  }
 }
+
+function lockFormClosed() {
+  submitBtn.disabled = true;
+  submitBtn.textContent = "Enrollment Closed";
+  var fields = form.querySelectorAll("input, button");
+  for (var i = 0; i < fields.length; i++) fields[i].disabled = true;
+  showMsg("info", "Enrollment is closed — no new roster entries are being accepted.");
+}
+
+if (CONFIG.enrollmentClosed) lockFormClosed();
 
 function esc(s) {
   return String(s)
@@ -102,6 +122,10 @@ fetchCount();
 
 form.addEventListener("submit", function (ev) {
   ev.preventDefault();
+  if (CONFIG.enrollmentClosed) {
+    showMsg("info", "Enrollment is closed — no new roster entries are being accepted.");
+    return;
+  }
   clearMsg();
   document.getElementById("err-handle").textContent = "";
   document.getElementById("err-address").textContent = "";
@@ -149,6 +173,10 @@ form.addEventListener("submit", function (ev) {
         showMsg("error", "The roster is full.");
         submitBtn.disabled = true;
         submitBtn.textContent = "Roster Full";
+      } else if (data && data.error === "closed") {
+        showMsg("info", "Enrollment is closed — no new roster entries are being accepted.");
+        submitBtn.disabled = true;
+        submitBtn.textContent = "Enrollment Closed";
       } else {
         showMsg("error", "Couldn't save your seat right now. Please try again.");
         submitBtn.disabled = false;
