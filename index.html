@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Bullshido Dojo</title>
-<meta name="description" content="Enrollment roster for the Bullshido dojo — 2,112 bull samurai across five ranks.">
+<meta name="description" content="Bullshido — 2,112 bull samurai across five ranks. GTD roster closed, 500/500 claimed. Minting live on OpenSea.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
@@ -21,128 +21,57 @@
 </a>
 
 <header class="hero">
-  <div class="hero-bg"></div>
+  <video class="hero-bg" autoplay muted loop playsinline poster="img/hero.jpg">
+    <source src="video/bullshido-hero.mp4" type="video/mp4">
+  </video>
   <div class="hero-scrim"></div>
   <div class="hero-inner">
     <div class="wrap" style="padding:0;">
       <div class="hero-badges">
-        <span class="seal"><span class="seal-mark">入</span>Dojo Enrollment &mdash; GTD Roster</span>
+        <span class="seal seal-closed"><span class="seal-mark">入</span>GTD Roster &mdash; 500/500 Claimed</span>
         <span class="chain-badge chain-badge-lg"><span class="chain-badge-label">Mint on</span><img src="img/robinhood-logo.png" alt="Robinhood" style="height:36px;display:block;"></span>
       </div>
       <h1 class="wordmark">BULL<em>SHIDO</em></h1>
-      <p class="hero-tagline">2,112 bull samurai stand across five ranks. Prove yourself on X, then claim your seat before the gates close.</p>
+      <p class="hero-tagline">2,112 bull samurai stand across five ranks. The GTD roster is closed &mdash; minting is live on OpenSea now.</p>
       <div class="hero-ctas">
-        <a class="btn btn-primary" href="#trial">
-          Begin the Trial
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-        </a>
-        <a class="btn btn-ghost" href="#roster">Go straight to the roster</a>
-        <a class="btn btn-opensea" href="https://opensea.io/collection/bullshido" target="_blank" rel="noopener">
-          View on OpenSea
+        <a class="btn btn-opensea btn-opensea-lg" href="https://opensea.io/collection/bullshido" target="_blank" rel="noopener">
+          Mint on OpenSea
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
         </a>
+        <a class="btn btn-ghost" href="#roster">GTD Roster status</a>
       </div>
     </div>
   </div>
 </header>
 
 <main>
-  <section id="trial">
-    <div class="wrap">
-      <div class="section-head">
-        <span class="eyebrow">Four proofs, one trial</span>
-        <h2 class="section-title">Earn your place</h2>
-        <p class="section-sub">Complete every step on X first &mdash; the roster below records your word against them. Skip one, and your seat is never confirmed.</p>
-      </div>
-      <div class="steps">
-        <div class="step">
-          <div class="step-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7-7 7 7"/></svg>
-          </div>
-          <div class="step-title">Follow the Dojo</div>
-          <div class="step-body">Follow the account so word of the next trial reaches you first.</div>
-          <a class="btn btn-ghost" id="btn-follow" href="#" target="_blank" rel="noopener">Follow on X</a>
-        </div>
-        <div class="step">
-          <div class="step-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7.5-4.6-10-9.1C.4 8.4 2 5 5.4 5 7.6 5 9 6.2 12 9c3-2.8 4.4-4 6.6-4C22 5 23.6 8.4 22 11.9 19.5 16.4 12 21 12 21z"/></svg>
-          </div>
-          <div class="step-title">Mark the Post</div>
-          <div class="step-body">Like the enrollment post &mdash; the first, quiet proof of intent.</div>
-          <a class="btn btn-ghost" id="btn-like" href="#" target="_blank" rel="noopener">View the Post</a>
-        </div>
-        <div class="step">
-          <div class="step-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 2l4 4-4 4M7 22l-4-4 4-4"/><path d="M3 12v-2a4 4 0 0 1 4-4h14M21 12v2a4 4 0 0 1-4 4H3"/></svg>
-          </div>
-          <div class="step-title">Carry the Banner</div>
-          <div class="step-body">Repost it to your own dojo, so others may take the same trial.</div>
-          <a class="btn btn-ghost" id="btn-repost" href="#" target="_blank" rel="noopener">Repost</a>
-        </div>
-        <div class="step">
-          <div class="step-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H8l-5 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-          </div>
-          <div class="step-title">Cheer the Dojo</div>
-          <div class="step-body">Leave a comment of support on the post &mdash; your address stays right here on the roster, no need to post it publicly.</div>
-          <a class="btn btn-ghost" id="btn-comment" href="#" target="_blank" rel="noopener">Comment</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <div class="wrap"><div class="divider"></div></div>
-
   <section id="roster">
     <div class="wrap">
       <div class="section-head">
-        <span class="eyebrow">The roster</span>
-        <h2 class="section-title">Claim your seat</h2>
-        <p class="section-sub">One seat per handle, one per wallet. Entries are reviewed against the post before the gates open &mdash; false oaths are struck from the roster.</p>
+        <span class="eyebrow">The GTD roster</span>
+        <h2 class="section-title">Every seat is claimed</h2>
+        <p class="section-sub">The free-mint roster filled up and enrollment is closed. Minting is now open to everyone directly on OpenSea.</p>
       </div>
 
-      <div class="roster-grid">
-        <div class="ledger">
-          <div id="form-msg" class="form-msg"></div>
-
-          <form id="entry-form">
-            <div class="field">
-              <label for="handle">Your X handle</label>
-              <input type="text" id="handle" name="handle" placeholder="@yourhandle" autocomplete="off">
-              <div class="field-error" id="err-handle"></div>
-            </div>
-            <div class="field mono">
-              <label for="address">Your EVM address</label>
-              <input type="text" id="address" name="address" placeholder="0x..." autocomplete="off">
-              <div class="field-error" id="err-address"></div>
-            </div>
-
-            <div class="checks">
-              <label class="check"><input type="checkbox" name="c1"><span><b>I follow</b> the dojo on X.</span></label>
-              <label class="check"><input type="checkbox" name="c2"><span><b>I liked</b> the enrollment post.</span></label>
-              <label class="check"><input type="checkbox" name="c3"><span><b>I reposted</b> the enrollment post.</span></label>
-              <label class="check"><input type="checkbox" name="c4"><span><b>I commented</b> on the post to show support.</span></label>
-            </div>
-
-            <button type="submit" class="btn btn-gold" id="submit-btn">Claim Your Seat</button>
-          </form>
-
-          <div id="success-view" style="display:none;"></div>
-        </div>
-
-        <div class="status-card">
+      <div class="roster-grid roster-grid-closed">
+        <div class="status-card status-card-lg">
           <div class="status-row">
             <span class="eyebrow" style="color:var(--paper-faint);">Seats claimed</span>
-            <span class="status-count" id="status-count">&hellip; / &hellip;</span>
+            <span class="status-count">500 / 500</span>
           </div>
-          <div class="obi"><div class="obi-fill" id="obi-fill"></div></div>
-          <p class="status-note" id="status-note">Enrollment closes: TBA</p>
+          <div class="obi"><div class="obi-fill" style="width:100%;"></div></div>
+          <p class="status-note">Enrollment is closed.</p>
 
           <div class="status-divider"></div>
 
           <div class="status-fact"><span>Collection size</span><b>2,112</b></div>
           <div class="status-fact"><span>Ranks</span><b>5</b></div>
-          <div class="status-fact"><span>Entry cost</span><b>Free</b></div>
+          <div class="status-fact"><span>GTD entry cost</span><b>Free</b></div>
+
+          <a class="btn btn-opensea" style="width:100%;justify-content:center;margin-top:22px;" href="https://opensea.io/collection/bullshido" target="_blank" rel="noopener">
+            Mint on OpenSea
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+          </a>
         </div>
       </div>
     </div>
@@ -159,7 +88,7 @@
         <span class="rank-chip"><span class="rank-dot" style="background:#FFD25A;"></span>Legendary <b>116</b></span>
         <span class="rank-chip"><span class="rank-dot" style="background:#FFF8DE;"></span>Ultra Legendary <b>10</b></span>
       </div>
-      <p class="foot-line">Bullshido &mdash; 2,112 bull samurai across five ranks. This roster is an enrollment record, not a mint site.</p>
+      <p class="foot-line">Bullshido &mdash; 2,112 bull samurai across five ranks. GTD roster closed (500/500). Minting live on OpenSea.</p>
     </div>
   </footer>
 </main>
